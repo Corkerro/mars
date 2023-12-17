@@ -1,7 +1,11 @@
 //====================================================================================================
 .header {
   // .header__container
-  padding: toRem(32) 0;
+  padding: toRem(32) 0 toRem(16);
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  background: var(--bg-primary);
 
   &__container {
     display: flex;
