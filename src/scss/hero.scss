@@ -1,6 +1,7 @@
 .hero {
   // .hero__container
   margin-top: toRem(120);
+
   &__container {
     @media (max-width: em(930)) {
       overflow: hidden;
@@ -44,6 +45,18 @@
         background: transparent;
         color: var(--main);
       }
+    }
+  }
+
+  // .hero__saturn
+
+  &__saturn {
+    position: absolute;
+    right: percent(1720, 1920);
+    top: 140px;
+    z-index: 1;
+    @media (max-width: em(1830)) {
+      display: none;
     }
   }
 

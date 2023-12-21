@@ -1,11 +1,19 @@
 //====================================================================================================
 .header {
-  // .header__container
   padding: toRem(32) 0 toRem(16);
   position: fixed;
   z-index: 10;
   width: 100%;
-  background: var(--bg-primary);
+  background: transparent;
+
+  transition: all 0.3s ease;
+
+  &._header-scroll {
+    background: rgba(0, 3, 12, 0.5);
+    backdrop-filter: blur(20px);
+    padding: toRem(16) 0;
+  }
+  // .header__container
 
   &__container {
     display: flex;

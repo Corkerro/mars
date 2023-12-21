@@ -1,0 +1,79 @@
+.why {
+  @include adaptiveValue('margin-top', -48, 64);
+  padding-bottom: toRem(1000);
+  // .why__container
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(20);
+    align-items: center;
+    & h1 {
+      text-align: center;
+    }
+    & > p {
+      max-width: toRem(680);
+      text-align: center;
+      margin-bottom: toRem(16);
+    }
+  }
+
+  // .why__content
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: toRem(16);
+    flex-wrap: wrap;
+
+    @media (max-width: em(1560)) {
+      justify-content: center;
+    }
+  }
+
+  // .why__card
+
+  &__card {
+    padding: toRem(16);
+    border-radius: 16px;
+    border: 1px solid var(--main, #e9e9e9);
+    background: rgba(0, 3, 12, 0.6);
+    backdrop-filter: blur(10px);
+    width: toRem(367);
+    @media (max-width: em(510)) {
+      width: 100%;
+    }
+
+    display: flex;
+    justify-content: space-between;
+
+    // .why__card_left
+
+    &_left {
+      display: flex;
+      flex-direction: column;
+      gap: toRem(20);
+
+      & h4 {
+        font-family: RubikMoonrocks;
+        @include adaptiveValue('font-size', 24, 18);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+
+    // .why__card_right
+
+    &_right {
+      object-fit: contain;
+    }
+  }
+
+  // .why__button
+
+  &__button {
+  }
+}
+.button {
+}
